@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongodb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongodb
+  template:
+    metadata:
+      labels:
+        app: mongodb
+    spec:
+      containers:
+      - name: mongodb
+        image: alfiabby/db:latest
+        ports:
+        - containerPort: 27017
+        env:
+        - name: MONGO_INITDB_ROOT_USERNAME
+          value: "alfiya"
+        - name: MONGO_INITDB_ROOT_PASSWORD
+          value: "alfiya"
+        - name: MONGO_INITDB_DATABASE
+          value: "mydb"
+        volumeMounts:
+        - name: mongodb
+          mountPath: /data/db:/docker-entrypoint-initdb.d/
+      volumes:
+        - name: mongodb
+          persistentVolumeClaim:
+            claimName: mongodb
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mongodb
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: standard
+  resources:
+    requests:
+      storage: 1Gi
+

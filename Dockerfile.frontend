@@ -1,0 +1,6 @@
+# Use a base image
+FROM jitesoft/lighttpd:latest
+
+RUN mkdir -p /var/www/html
+# Copy your HTML and JavaScript files to the container
+COPY index.html /var/www/html

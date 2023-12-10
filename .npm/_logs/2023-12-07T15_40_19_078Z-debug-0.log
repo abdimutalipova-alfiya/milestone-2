@@ -1,0 +1,86 @@
+0 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', '-g', 'mongo-express' ]
+1 info using npm@8.5.1
+2 info using node@v12.22.9
+3 timing npm:load:whichnode Completed in 0ms
+4 timing config:load:defaults Completed in 1ms
+5 timing config:load:file:/usr/share/nodejs/npm/npmrc Completed in 5ms
+6 timing config:load:builtin Completed in 5ms
+7 timing config:load:cli Completed in 2ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:project Completed in 1ms
+10 timing config:load:file:/home/vagrant/.npmrc Completed in 0ms
+11 timing config:load:user Completed in 0ms
+12 timing config:load:file:/etc/npmrc Completed in 0ms
+13 timing config:load:global Completed in 0ms
+14 timing config:load:validate Completed in 0ms
+15 timing config:load:credentials Completed in 1ms
+16 timing config:load:setEnvs Completed in 1ms
+17 timing config:load Completed in 11ms
+18 timing npm:load:configload Completed in 11ms
+19 timing npm:load:setTitle Completed in 0ms
+20 timing config:load:flatten Completed in 1ms
+21 timing npm:load:display Completed in 2ms
+22 verbose logfile /home/vagrant/.npm/_logs/2023-12-07T15_40_19_078Z-debug-0.log
+23 timing npm:load:logFile Completed in 4ms
+24 timing npm:load:timers Completed in 0ms
+25 timing npm:load:configScope Completed in 0ms
+26 timing npm:load Completed in 17ms
+27 timing arborist:ctor Completed in 1ms
+28 timing idealTree:init Completed in 3ms
+29 timing idealTree:userRequests Completed in 1ms
+30 silly idealTree buildDeps
+31 silly fetch manifest mongo-express@*
+32 http fetch GET 200 https://registry.npmjs.org/mongo-express 1453ms (cache miss)
+33 silly placeDep ROOT mongo-express@1.0.2 OK for:  want: *
+34 silly fetch manifest basic-auth-connect@^1.0.0
+35 silly fetch manifest body-parser@^1.20.1
+36 silly fetch manifest bootstrap-paginator@github:rtritto/bootstrap-paginator#develop
+37 silly fetch manifest bson@^4.7.0
+38 silly fetch manifest busboy@^1.6.0
+39 silly fetch manifest cli-color@^2.0.3
+40 silly fetch manifest commander@^2.9.0
+41 silly fetch manifest cookie-parser@1.4.6
+42 silly fetch manifest csurf@1.11.0
+43 silly fetch manifest dotenv@^16.0.3
+44 silly fetch manifest errorhandler@1.5.1
+45 silly fetch manifest express@^4.18.2
+46 silly fetch manifest express-fileupload@^1.4.0
+47 silly fetch manifest express-session@^1.17.3
+48 silly fetch manifest flat@^5.0.2
+49 silly fetch manifest free-swig@^1.5.2
+50 silly fetch manifest gridfs-stream@^1.1.1
+51 silly fetch manifest html-entities@^2.3.3
+52 silly fetch manifest json2csv@^5.0.7
+53 silly fetch manifest lodash-es@^4.17.21
+54 silly fetch manifest memorystore@^1.6.7
+55 silly fetch manifest method-override@^3.0.0
+56 silly fetch manifest mongodb@^4.13.0
+57 timing idealTree Completed in 1498ms
+58 timing command:install Completed in 1550ms
+59 verbose stack Error: Unsupported URL Type "patch:": patch:mongodb-query-parser@npm%3A2.4.6#~/.yarn/patches/mongodb-query-parser-npm-2.4.6-234abad2fc.patch
+59 verbose stack     at unsupportedURLType (/usr/share/nodejs/npm-package-arg/npa.js:246:15)
+59 verbose stack     at fromURL (/usr/share/nodejs/npm-package-arg/npa.js:306:13)
+59 verbose stack     at Function.resolve (/usr/share/nodejs/npm-package-arg/npa.js:76:12)
+59 verbose stack     at /usr/share/nodejs/@npmcli/arborist/lib/arborist/build-ideal-tree.js:1055:38
+59 verbose stack     at Array.map (<anonymous>)
+59 verbose stack     at visit (/usr/share/nodejs/@npmcli/arborist/lib/arborist/build-ideal-tree.js:1054:56)
+59 verbose stack     at visitNode (/usr/share/nodejs/npm/node_modules/treeverse/lib/depth-descent.js:57:25)
+59 verbose stack     at next (/usr/share/nodejs/npm/node_modules/treeverse/lib/depth-descent.js:44:19)
+59 verbose stack     at depth (/usr/share/nodejs/npm/node_modules/treeverse/lib/depth-descent.js:82:10)
+59 verbose stack     at depth (/usr/share/nodejs/npm/node_modules/treeverse/lib/depth.js:27:12)
+60 verbose cwd /home/vagrant
+61 verbose Linux 5.15.0-56-generic
+62 verbose argv "/usr/bin/node" "/usr/bin/npm" "install" "-g" "mongo-express"
+63 verbose node v12.22.9
+64 verbose npm  v8.5.1
+65 error code EUNSUPPORTEDPROTOCOL
+66 error Unsupported URL Type "patch:": patch:mongodb-query-parser@npm%3A2.4.6#~/.yarn/patches/mongodb-query-parser-npm-2.4.6-234abad2fc.patch
+67 verbose exit 1
+68 timing npm Completed in 1816ms
+69 verbose unfinished npm timer reify 1701963619328
+70 verbose unfinished npm timer reify:loadTrees 1701963619342
+71 verbose unfinished npm timer idealTree:buildDeps 1701963619347
+72 verbose unfinished npm timer idealTree:#root 1701963619347
+73 verbose code 1
+74 error A complete log of this run can be found in:
+74 error     /home/vagrant/.npm/_logs/2023-12-07T15_40_19_078Z-debug-0.log

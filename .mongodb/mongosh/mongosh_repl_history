@@ -1,0 +1,23 @@
+exit
+db.students.updateOne({"name":"Safiya"},{$set:{"name":"Alfiya Abdimutalipova"}})
+db.students.find()
+db.students.updateOne({"name":"Alfiya Abdimutalipova"},{$set:{"name":"Safiya"}})
+db.students.find()
+db.students.updateOne({"name":"Alfiya Abdimutalipova"},$set:{"name":"Safiya"})
+db.students.updateOne({"name"="Alfiya Abdimutalipova"},$set:{"name":"Safiya"})
+db.students.find()
+db.students.updateOne({_id="6573655353c6c2d275acc4e8"},$set:{"name":"Safiya"})
+db.students.updateOne({_id=6573655353c6c2d275acc4e8},$set:{"name":"Safiya"})
+db.students.updateOne({_id=1},$set:{"name":"Safiya"})
+db.students.updateOne({id_=1},$set:{"name":"Safiya"})
+db.students.updateOne({"name":"Alfiya"},{"name":"Safiya"})
+db.students.updateOne{"name":"Alfiya"},{"name":"Safiya"}
+show collections
+use mydb
+show dbs
+exit
+db.runCommand({connectionStatus: 1})
+show dbs
+exit
+show dbs
+exit
